@@ -2,6 +2,7 @@ package com.vittech.testcase;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.internal.ReporterConfig.Property;
 
 import com.microsoft.playwright.Page;
 import com.vittech.pages.LoginPage;
@@ -24,8 +25,9 @@ public void verifyOrangeHRMLoginTest() {
 
 	lp.LoginPageTitle();
 	lp.LoginPageUrl();
-	lp.SetUsername("Admin");
-	lp.SetPassword("admin123");
+	lp.SetUsername(prop.getProperty("username"));
+	lp.SetPassword(prop.getProperty("password"));
+	
 	lp.ClickLogin();
 }
 }

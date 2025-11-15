@@ -3,12 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.vittech.testcase.LoginPageTC">
+      <class name="com.vittech.testcase.LoginPageTC2">
         <methods>
-          <include name="VerifyLogoVisible"/>
+          <include name="teardown"/>
+          <include name="loginTest"/>
           <include name="setup"/>
+          <include name="init"/>
         </methods>
-      </class> <!-- com.vittech.testcase.LoginPageTC -->
+      </class> <!-- com.vittech.testcase.LoginPageTC2 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

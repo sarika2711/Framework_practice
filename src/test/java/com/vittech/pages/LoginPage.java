@@ -17,25 +17,24 @@ public class LoginPage {
 		}
 		
 		
-		
 		public boolean VerifyLogo()
 		{
 			return page.locator(logo).isVisible();
 		}
 		
-		public String LoginPageTitle()
+		public void LoginPageTitle()
 		{
 			String title=page.title();
 			System.out.println(title);
-			return title;
+			
 		}
 		
 		
-		public String LoginPageUrl()
+		public void LoginPageUrl()
 		{
 			String url=page.url();
 			System.out.println(url);
-			return url;
+			
 		}
 		
 		
@@ -68,10 +67,14 @@ public class LoginPage {
 		try
 		{
 			page.locator(button).click();
+			
+			
 		} catch(Exception e)
 		{
 			e.printStackTrace();
 		}
+		
+		
 	}
 
 }

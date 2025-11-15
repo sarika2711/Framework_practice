@@ -1,5 +1,11 @@
 package com.vittech.testbase;
 
+import java.util.Properties;
+
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 
 import com.microsoft.playwright.Browser;
@@ -9,32 +15,41 @@ import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
 import com.vittech.pages.LoginPage;
 import com.vittech.playwright_factory.PlaywrightFactory;
+import com.vittech.utility.ExcelDataProvider;
 
 public class TestBase {
 	
-	Browser browser;
-	BrowserContext context;
-	LoginPage lp;
+	
+	protected LoginPage lp;
 	public Page page;
 	PlaywrightFactory pf;
+	protected Properties prop;
+	protected ExcelDataProvider excelDataProvider;
 	
-	@BeforeTest
+	
+	@BeforeSuite
+	 public void init()
+	 {
+		excelDataProvider=new ExcelDataProvider("testdata","Sheet2");
+	 }
+	
+	@BeforeMethod
 	public void setup()
 	{
 		PlaywrightFactory pf= new PlaywrightFactory();
-		page=pf.browserFactory("CHROMIUM");
+		page = pf.browserFactory("firefox");
+		 
+		prop=pf.getProperties();
 		
-		 lp=new LoginPage(page);
-		 
-		 
+		lp=new LoginPage(page);
+		
 		
 	}
 	
 	
+	@AfterMethod
 	public void teardown()
 	{
-		browser.close();
-		context.close();
 		page.close();
 	}
 
