@@ -62,17 +62,20 @@ public class LoginPage {
 		}
 	}
 	
-	public void ClickLogin()
+	public HomePage ClickLogin()
 	{
 		try
 		{
 			page.locator(button).click();
+			return new HomePage(page);
 			
 			
 		} catch(Exception e)
 		{
 			e.printStackTrace();
+			return null;
 		}
+		
 		
 		
 	}

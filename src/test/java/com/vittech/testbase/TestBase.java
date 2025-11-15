@@ -33,7 +33,7 @@ public class TestBase {
 		excelDataProvider=new ExcelDataProvider("testdata","Sheet2");
 	 }
 	
-	@BeforeMethod
+	@BeforeTest
 	public void setup()
 	{
 		PlaywrightFactory pf= new PlaywrightFactory();
@@ -47,7 +47,7 @@ public class TestBase {
 	}
 	
 	
-	@AfterMethod
+	@AfterTest
 	public void teardown()
 	{
 		page.close();

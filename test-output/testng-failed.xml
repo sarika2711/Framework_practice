@@ -3,14 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.vittech.testcase.LoginPageTC2">
+      <class name="com.vittech.testcase.HomePageTC">
         <methods>
+          <include name="navigateToDashboardTest"/>
           <include name="teardown"/>
-          <include name="loginTest"/>
           <include name="setup"/>
+          <include name="navigateToAdminPageTest"/>
           <include name="init"/>
         </methods>
-      </class> <!-- com.vittech.testcase.LoginPageTC2 -->
+      </class> <!-- com.vittech.testcase.HomePageTC -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
