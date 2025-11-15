@@ -11,9 +11,6 @@ import com.vittech.testbase.TestBase;
 
 public class LoginPageTC extends TestBase {
 	
-	
-	
-	// Page page;
 @Test(priority=1)
 	public void VerifyLogoVisible()
 	{
@@ -35,8 +32,5 @@ public void verifyOrangeHRMLoginTest() {
 	
     lp.ClickLogin();
 }
-
-
-
 
 }

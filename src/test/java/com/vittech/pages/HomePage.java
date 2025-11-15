@@ -7,8 +7,8 @@ public class HomePage{
   
 	private Page page;
 	
-	private String hm_Link="//span[text()='Dashboard']";
-	private String admin_Link="//span[text()='Admin']";
+	private static String hm_Link="//span[text()='Dashboard']";
+	private static String admin_Link="//span[text()='Admin']";
 
 	public HomePage(Page page) 
 	{

@@ -18,6 +18,7 @@ private HomePage hm;
 		hm = lp.ClickLogin();
 	}
 	
+	
 	@Test(priority = 2)
 	public void navigateToAdminPageTest() 
 	{	

@@ -6,10 +6,10 @@ public class LoginPage {
 	
 	Page page;
 	
-	private String logo="//img[@alt='company-branding']";
-	private String username_txt="//input[@name='username']";
-	private String password_txt="//input[@name='password']";
-	private String button="//button[@type='submit']";
+	private static String logo="//img[@alt='company-branding']";
+	private static String username_txt="//input[@name='username']";
+	private static String password_txt="//input[@name='password']";
+	private static String button="//button[@type='submit']";
 		
 		public LoginPage(Page page)
 		{
@@ -75,7 +75,6 @@ public class LoginPage {
 			e.printStackTrace();
 			return null;
 		}
-		
 		
 		
 	}

@@ -2,7 +2,8 @@ package com.vittech.pages;
 
 import com.microsoft.playwright.Page;
 
-public class AdminPage {
+public class AdminPage 
+{
 	
 	Page page;
 	
